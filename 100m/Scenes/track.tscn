@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dj3fjbpyoo670"]
+
+[ext_resource type="Texture2D" uid="uid://b3nbdko6rteao" path="res://bg/track_0001.png" id="1_seeld"]
+[ext_resource type="PackedScene" uid="uid://dqypcqlwtrstx" path="res://Scenes/character.tscn" id="2_usj4t"]
+
+[node name="Track" type="Node2D" unique_id=804298523]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2026646525]
+position = Vector2(181, 320.77777)
+scale = Vector2(2.011111, 2.011111)
+texture = ExtResource("1_seeld")
+
+[node name="character" parent="." unique_id=1849707736 instance=ExtResource("2_usj4t")]
+position = Vector2(35, 500)

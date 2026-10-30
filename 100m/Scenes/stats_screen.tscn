@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://baxw0et57jvxb"]
+
+[ext_resource type="Texture2D" uid="uid://dlf17qeyjopk6" path="res://bg/track_0002.png" id="1_4dfa4"]
+[ext_resource type="Texture2D" uid="uid://cu1sm0b0a8h8b" path="res://Assets/untitled.png" id="2_ht35g"]
+[ext_resource type="Script" uid="uid://cvv3qls3y7iti" path="res://Scripts/start_button.gd" id="3_ht35g"]
+[ext_resource type="Script" uid="uid://c5qi56kqrks4b" path="res://Scripts/team_button.gd" id="4_xml5v"]
+
+[node name="statsScreen" type="Node2D" unique_id=703563806]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1900060747]
+position = Vector2(570, 328.00003)
+scale = Vector2(6.511111, 2.1000001)
+texture = ExtResource("1_4dfa4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=791513661]
+position = Vector2(562, 163)
+texture = ExtResource("2_ht35g")
+
+[node name="start_button" type="Button" parent="." unique_id=345260668]
+offset_left = 397.0
+offset_top = 350.0
+offset_right = 742.0
+offset_bottom = 407.0
+text = "Start"
+script = ExtResource("3_ht35g")
+
+[node name="team_button" type="Button" parent="." unique_id=1596416229]
+offset_left = 400.0
+offset_top = 438.0
+offset_right = 743.0
+offset_bottom = 494.0
+text = "Team"
+script = ExtResource("4_xml5v")
+
+[connection signal="pressed" from="start_button" to="start_button" method="_on_pressed"]
+[connection signal="pressed" from="team_button" to="team_button" method="_on_pressed"]

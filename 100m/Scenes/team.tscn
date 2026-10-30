@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://doho2yxkhqm8s"]
+
+[ext_resource type="Script" uid="uid://c0a5lk23jxi8" path="res://Scripts/global_script.gd" id="1_0ib3d"]
+[ext_resource type="Texture2D" uid="uid://dlf17qeyjopk6" path="res://bg/track_0002.png" id="1_lughb"]
+[ext_resource type="Texture2D" uid="uid://b3nbdko6rteao" path="res://bg/track_0001.png" id="2_mv6eg"]
+[ext_resource type="PackedScene" uid="uid://dqypcqlwtrstx" path="res://Scenes/character.tscn" id="3_mv6eg"]
+[ext_resource type="Script" uid="uid://bwkoe64w38y5w" path="res://Scripts/back_button.gd" id="4_ck41f"]
+[ext_resource type="Texture2D" uid="uid://b8gm6v6q81b14" path="res://Assets/statscreen.png" id="5_uuywt"]
+[ext_resource type="Script" uid="uid://beeqjbjkkjivf" path="res://Scripts/label.gd" id="7_vyr1m"]
+
+[node name="Node2D" type="Node2D" unique_id=121521048]
+script = ExtResource("1_0ib3d")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1354066068]
+position = Vector2(638, 330)
+scale = Vector2(7.3333335, 2.34375)
+texture = ExtResource("1_lughb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=326326693]
+position = Vector2(183, 326)
+scale = Vector2(2, 2)
+texture = ExtResource("2_mv6eg")
+
+[node name="character" parent="." unique_id=1849707736 instance=ExtResource("3_mv6eg")]
+position = Vector2(287, 53)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=143298547]
+position = Vector2(904, 327)
+scale = Vector2(1.884375, 1.884375)
+texture = ExtResource("5_uuywt")
+
+[node name="Button" type="Button" parent="." unique_id=271184625]
+offset_left = 371.0
+offset_top = 5.0
+offset_right = 498.0
+offset_bottom = 41.0
+text = "Back"
+script = ExtResource("4_ck41f")
+
+[node name="Label" type="Label" parent="." unique_id=433471481]
+offset_left = 769.0
+offset_top = 102.0
+offset_right = 1063.0
+offset_bottom = 389.0
+script = ExtResource("7_vyr1m")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
