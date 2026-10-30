@@ -27,5 +27,7 @@ func seconds():
 	return milesPerHour
 
 #display on screen function
-func playerStats ():
-	$Label.text = "Name: " + sprinterName + "\n" + "Speed: " +str(speed) + "\n" + "Time: " + str(time)
+func playerStats() -> String:
+	var stats = "Name: " + sprinterName
+	stats +=  "\nSpeed: " +str(speed)
+	stats += "\nTime: " + str(time)

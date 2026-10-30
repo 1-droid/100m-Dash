@@ -12,5 +12,10 @@ var energy: int = 4
 var random_index
 
 
+
 #Objects
-var r1 = Runners.new(randomName)
+var r1
+
+func _ready():
+	r1 = Runners.new(randomName)
+	r1.playerStats()
